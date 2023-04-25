@@ -23,6 +23,16 @@ This project is about creating an interactive experience in the terminal for a f
 
 Moreover, it also offer users an option to view the first five rows of the individual data trip from that city. As well as, the ability to continue looking through another city or terminate the process afterwards.
 
+### Files Used
+Files used in the projects have information containing the start time, end time, trip duration, start station, end station, user type, gender and birth year.
+
+File names:
+1. chicago.csv
+2. new york.csv
+3. washington.csv*
+
+*does not have gender and birth year columns
+
 ### Acknowledgement
 The formatting of the python scripts in this project is highly based on the tutorials and other sources from Udacity - Programming for Data Science with Python.
 
