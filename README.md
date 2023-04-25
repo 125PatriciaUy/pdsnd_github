@@ -21,7 +21,7 @@ This project is about creating an interactive experience in the terminal for a f
 3. Trip duration- total travel time and mean travel time
 4. User- counts of user types and gender.
 
-Moreover, it also offer users an option to view the first five rows from the raw file of the city of their choice. As well as, the ability to continue looking through another city or terminate the process afterwards.
+Moreover, it also offer users an option to view the first five rows of the individual data trip from that city. As well as, the ability to continue looking through another city or terminate the process afterwards.
 
 ### Acknowledgement
 The formatting of the python scripts in this project is highly based on the tutorials and other sources from Udacity - Programming for Data Science with Python.
