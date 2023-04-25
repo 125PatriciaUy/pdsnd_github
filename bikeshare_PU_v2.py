@@ -158,6 +158,7 @@ def trip_duration_stats(df):
     mean_time = int(df['Trip Duration'].mean()) // 60
     print('Mean travel time: {} minutes'.format(mean_time))
     
+    
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -190,9 +191,11 @@ def user_stats(df):
 
 def display_data(df):
 
+    # Ask users to view five rows of individual data trip
     view_data = input('\nWould you like to view 5 rows of individual data trip? Enter yes or no.\n')
     start_loc= 0
     
+    #Display five rows of individual data trip
     while True:
         print(df.iloc[start_loc:start_loc + 5])
         start_loc +=5
