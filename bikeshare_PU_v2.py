@@ -20,6 +20,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         city= str(input('Enter the city that you want to view the data from. Choices are: Chicago, New York City, or Washington: ')).lower()
@@ -28,24 +29,27 @@ def get_filters():
             break    
         else:
             print('Please choose a valid city name.')
-            
-    # get user input for month (all, january, february, ... , june)
+
+   # get user input for date filter
     while True:
-        month= str(input('Enter the month that you want to view the data from. Months available are from January to June. Type All if you want to view the full data set: ')).lower()
-    
-        if month in months:
-            break
+        filter_by = str(input("Do you want to filter by month or day? ")).lower()
+        if filter_by == "month":
+            month= str(input('Enter the month that you want to view the data from. Months available are from January to June. Type All if you want to view the full data set: ')).lower()
+            day= "all"
+            if month in months:
+                break
+            else:
+                print('Please choose a valid month.')
+        elif filter_by == "day":   
+            day= str(input('Enter the day that you want to view the data from. Days available are from Sunday to Saturday. Type All if you want to view the full data set: ')).lower()       
+            month= "all"
+            if day in days:
+                break 
+            else:
+                print('Please choose a valid day.')
         else:
-            print('Please choose a valid month.')     
+            print("Invalid input. Please enter 'month' or 'day'")
             
-    # get user input for day of week (all, monday, tuesday, ... sunday)
-    while True:    
-        day= str(input('Enter the day that you want to view the data from. Days available are from Sunday to Saturday. Type All if you want to view the full data set: ')).lower()
-        
-        if day in days:
-            break    
-        else:
-            print('Please choose a valid day.')
             
     #summarise results
     print('\nYou have chosen the following:\ncity: {},\nmonth: {},\nday: {}'.format(city.title(), month.title(), day.title()))
